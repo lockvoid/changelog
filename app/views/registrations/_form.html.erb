@@ -1,0 +1,32 @@
+<%= form_for @user, url: signup_path  do |f| %>
+  <% if @user.errors.any? %>
+    <div class="form-errors">
+      <b>Please check the required fields below:</b>
+
+      <ul>
+        <% for message in @user.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :display_name, 'Your name' %>
+    <%= f.text_field :display_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="actions">
+      <%= f.submit %>
+  </div>
+<% end %>

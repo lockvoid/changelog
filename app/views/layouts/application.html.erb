@@ -10,6 +10,10 @@
   </head>
 
   <body>
+    <% flash.each do |name, text| %>
+      <%= content_tag :div, text, class: "flash flash--#{name}" %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

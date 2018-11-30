@@ -1,0 +1,17 @@
+.form-errors {
+  ul li {
+    font-size: 14px;
+    list-style: square;
+    color: #cc0000;
+  }
+}
+
+label {
+  display: block;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
