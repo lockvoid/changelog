@@ -1,5 +1,7 @@
-<div class="project-card project-card--center">
-  <h4 class="project-card__heading">
-    <%= link_to 'New project', new_project_url %>
-  </h4>
-</div>
+<%= link_to new_project_url, class: 'project-card project-card--new' do %>
+  <i data-feather="plus" class="project-card__plus"></i>
+
+  <span class="project-card__new">
+    <span class="text--large">New Project </span>
+  </h3>
+<% end %>
