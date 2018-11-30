@@ -1,0 +1,9 @@
+<div class="project-card">
+  <% if project %>
+    <h3 class="project-card__heading"><%= project.name %></h3>
+
+    <%= link_to 'Show', project %>
+  <% else %>
+    <%= link_to 'New project', new_project_url %>
+  <% end %>
+</div>

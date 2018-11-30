@@ -2,18 +2,34 @@ require_relative 'boot'
 
 require 'rails/all'
 
-# Require the gems listed in Gemfile, including any gems
-# you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
 module Changelog
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration can go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded after loading
-    # the framework and any gems in your application.
+    config.generators.system_tests = nil
+
+    config.action_view.field_error_proc = Proc.new { |html_tag, instance|
+      puts
+      if html_tag =~ /<(input|textarea|select)/
+        html_field = Nokogiri::HTML::DocumentFragment.parse(html_tag)
+        html_field.children.add_class 'field-input--invalid'
+
+        template = <<-eos
+          #{html_field.to_s}
+
+          <p class="field-error">
+            #{instance.error_message.first.capitalize}
+          </p>
+        eos
+
+        template.html_safe
+      else
+        html_tag
+      end
+    }
   end
 end
+
+

@@ -1,7 +1,8 @@
 .flash {
-  padding: 5px 10px;
+  padding: 10px 15px;
   margin: 10px 0;
   display: inline-flex;
+  box-shadow: 0 0 0 1px rgba(16,22,26,.1), 0 0 0 rgba(16,22,26,0), 0 1px 1px rgba(16,22,26,.2);
 }
 
 .flash--notice {
@@ -10,11 +11,13 @@
 }
 
 .flash--error {
-  background-color: #FCC;
-  border: solid 1px #C66;
+  background-color: #eb5a46;
+  border-radius: 5px;
+  color: rgba(white, 0.9);
 }
 
 .flash--alert {
-  background-color: #FCC;
-  border: solid 1px #C66;
+  background-color: #eb5a46;
+  border-radius: 5px;
+  color: rgba(white, 0.9);
 }

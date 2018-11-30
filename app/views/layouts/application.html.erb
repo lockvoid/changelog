@@ -10,10 +10,18 @@
   </head>
 
   <body>
-    <% flash.each do |name, text| %>
-      <%= content_tag :div, text, class: "flash flash--#{name}" %>
+    <% if current_user %>
+      <div class="application-layout__header">
+        <%= render partial: 'shared/application_header' %>
+      </div>
     <% end %>
 
-    <%= yield %>
+    <div class="application-layout__content">
+      <% flash.each do |name, text| %>
+        <%= content_tag :div, text, class: "flash flash--#{name}" %>
+      <% end %>
+
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -1,0 +1,22 @@
+.project-card {
+  display: inline-flex;
+  flex-direction: column;
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 200px;
+  height: 120px;
+  box-shadow: 0 0 0 1px rgba(16,22,26,.1), 0 0 0 rgba(16,22,26,0), 0 1px 1px rgba(16,22,26,.2);
+}
+
+.project-card__heading {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.project-card--center {
+  justify-content: center;
+  align-items: center;
+}

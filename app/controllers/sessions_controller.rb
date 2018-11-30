@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
       redirect_back_or_to root_url
     else
       flash.now.alert = "Email or password was invalid"
+
       render :new
     end
   end
@@ -15,6 +16,6 @@ class SessionsController < ApplicationController
   def destroy
     logout
 
-    redirect_to root_url
+    redirect_to signin_url
   end
 end
