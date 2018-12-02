@@ -9,6 +9,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
+    @releases = @project.releases.order(date: :desc)
   end
 
   def new

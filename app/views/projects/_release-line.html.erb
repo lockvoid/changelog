@@ -1,0 +1,9 @@
+<div class="release-line">
+  <% if local_assigns.has_key? :anchor_url %>
+    <%= link_to anchor_url, class: "release-line__anchor"  do %>
+      <i data-feather="link"></i>
+    <% end %>
+  <% end %>
+
+  <%= content_tag :div, '', class: 'release-line__line' %>
+</div>

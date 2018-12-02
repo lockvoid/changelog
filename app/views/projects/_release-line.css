@@ -1,0 +1,34 @@
+.release-line {
+  padding: 0 5px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.release-line__line {
+  width: 2px;
+  background-color: color(#aa9c84 a(0.5));
+  height: 100%;
+}
+
+.release-line__anchor {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: block;
+  background-color: color(#aa9c84 a(0.5));
+  border: 2px solid #f6f2ef;
+  z-index: 2;
+  position: relative;
+  box-shadow: border;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+
+  & > svg {
+    color: #aa9c84;
+    width: 16px;
+  }
+}

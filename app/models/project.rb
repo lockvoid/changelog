@@ -2,6 +2,7 @@ class Project < ApplicationRecord
   before_create :renew_api_key
 
   belongs_to :user
+  has_many :releases
 
   validates :name, presence: true
 

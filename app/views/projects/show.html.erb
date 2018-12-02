@@ -1,18 +1,13 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
+<h1>
   <%= @project.name %>
-</p>
+</h1>
 
-<p>
-  <strong>Api key:</strong>
-  <%= @project.api_key %>
-</p>
-
-<p>
-  <strong>User:</strong>
-  <%= @project.user %>
-</p>
+<div class="releases">
+  <% @releases.each do |release| %>
+    <div class="releases__release">
+      <%= render 'release', release: release %>
+    </div>
+  <% end %>
+</div>
 
 <%= link_to 'Back', projects_path %>
