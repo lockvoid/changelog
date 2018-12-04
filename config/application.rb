@@ -1,8 +1,13 @@
 require_relative 'boot'
 
-require 'rails/all'
-
-Bundler.require(*Rails.groups)
+require "rails"
+require "active_model/railtie"
+require "active_job/railtie"
+require "active_record/railtie"
+require "action_controller/railtie"
+require "action_mailer/railtie"
+require "action_view/railtie"
+require "action_cable/engine"
 
 module Changelog
   class Application < Rails::Application
@@ -10,7 +15,7 @@ module Changelog
 
     config.generators.system_tests = nil
 
-    config.assets.enabled = false
+    # config.assets.enabled = false
 
     config.action_view.field_error_proc = Proc.new { |html_tag, instance|
       if html_tag =~ /<(input|textarea|select)/
