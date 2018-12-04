@@ -13,7 +13,6 @@ module Changelog
     config.assets.enabled = false
 
     config.action_view.field_error_proc = Proc.new { |html_tag, instance|
-      puts
       if html_tag =~ /<(input|textarea|select)/
         html_field = Nokogiri::HTML::DocumentFragment.parse(html_tag)
         html_field.children.add_class 'field-input--invalid'

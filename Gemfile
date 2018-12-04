@@ -6,13 +6,11 @@ ruby '2.5.3'
 
 gem 'rails', '~> 5.2.1'
 gem 'puma', '~> 3.11'
-gem 'sass-rails', '~> 5.0'
 gem 'webpacker'
 gem "sorcery", "~> 0.13.0"
 gem "email_validator", "~> 1.6"
 gem 'bootsnap', '>= 1.1.0', require: false
 gem "kramdown", "~> 1.17"
-gem "uglifier", "~> 4.1"
 
 group :development do
   gem 'sqlite3'
