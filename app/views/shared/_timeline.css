@@ -1,0 +1,40 @@
+.timeline {
+  display: grid;
+  grid-column-gap: 5px;
+  grid-template-columns: 150px 50px minmax(400px, auto);
+  grid-template-areas: "sidebar anchor content";
+}
+
+.timeline__sidebar {
+  grid-area: sidebar;
+}
+
+.timeline__label {
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  color: #aa9c84;
+  font-size: 12px;
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+
+.timeline__anchor {
+  grid-area: anchor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline__line {
+  width: 2px;
+  background-color: color(#aa9c84 a(0.5));
+  height: 100%;
+}
+
+.timeline__content {
+  grid-area: content;
+  padding-bottom: 40px;
+}

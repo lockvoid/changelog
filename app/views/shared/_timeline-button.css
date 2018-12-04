@@ -1,0 +1,20 @@
+.timeline-button {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: block;
+  background-color: transparent;
+  border: 2px solid #5aac44;
+  z-index: 2;
+  position: relative;
+  box-shadow: border;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+
+  & > svg {
+    color: #5aac44;
+    width: 24px;
+  }
+}

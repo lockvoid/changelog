@@ -1,0 +1,21 @@
+<div class="timeline">
+  <div class="timeline__sidebar">
+    <% if local_assigns.has_key? :label %>
+      <div class="timeline__label">
+        <%= label %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="timeline__anchor">
+    <% if local_assigns.has_key? :anchor %>
+      <%= anchor %>
+    <% end %>
+
+    <%= content_tag :div, '', class: 'timeline__line' %>
+  </div>
+
+  <div class="timeline__content" id="<%= local_assigns[:content_id] %>" data-target="<%= local_assigns[:content_target] %>">
+    <%= yield %>
+  </div>
+</div>

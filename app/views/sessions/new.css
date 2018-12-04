@@ -1,0 +1,15 @@
+.signin {
+  align-items: center;
+  margin: 0 auto;
+  width: 400px;
+  flex-direction: column;
+  display: flex;
+}
+
+.signin__form {
+  width: 400px;
+}
+
+.signin__footer {
+  margin-top: 20px;
+}

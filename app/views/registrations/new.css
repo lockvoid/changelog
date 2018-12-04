@@ -1,0 +1,15 @@
+.signup {
+  align-items: center;
+  margin: 0 auto;
+  width: 400px;
+  flex-direction: column;
+  display: flex;
+}
+
+.signup__form {
+  width: 400px;
+}
+
+.signup__footer {
+  margin-top: 20px;
+}

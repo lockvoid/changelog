@@ -1,0 +1,13 @@
+<div class="release-post">
+  <h3 class="release-post__name">
+    <%= release.name %>
+
+    <div class="release-post__actions">
+      <%= render 'shared/release-post-actions', release: release %>
+    </div>
+  </h3>
+
+  <div class="release-post__body">
+    <%=m release.body %>
+  </div>
+</div>

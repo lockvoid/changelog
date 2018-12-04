@@ -1,0 +1,38 @@
+.application-header {
+  background: #026aa7;
+  height: 50px;
+  display: flex;
+  padding: 0 20px;
+  align-items: center;
+}
+
+.application-header__greetings {
+  color: color(white a(0.8));
+  line-height: 1;
+}
+
+.application-header__user {
+  margin-left: auto;
+  display: flex;
+}
+
+.application-header__menu-item {
+  color: color(white a(0.8));
+
+  & + .application-header__menu-item:before {
+    content: "·";
+    display: inline-block;
+    margin: 0 10px;
+  }
+}
+
+.application-header__menu-item a {
+  color: color(white a(0.8));
+  border-bottom-color: color(white a(0.8));
+
+  &:hover {
+    background: transparent;
+    color: white;
+    border-bottom-color: white;
+  }
+}

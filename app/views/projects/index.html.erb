@@ -1,14 +1,12 @@
 <h1>Projects</h1>
 
-<div class="project-cards">
+<div class="projects-cards">
   <% @projects.each do |project| %>
-    <div class="project-cards__card">
-      <%= render 'project-card', project: project %>
-    </div>
+    <%= render 'project-card', project: project %>
   <% end %>
 
   <div class="project-cards__card">
-      <%= render 'new_project_card' %>
+      <%= render 'new-project-card' %>
   </div>
 </div>
 

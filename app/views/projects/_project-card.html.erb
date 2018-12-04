@@ -1,3 +1,7 @@
-<%= link_to project, class: "project-card" do %>
-  <h3 class="project-card__heading"><%= project.name %></h3>
+<%= link_to project, class: 'project-card' do %>
+  <%= render 'shared/card', elevation: 1, interactive: true do %>
+    <div class="project-card__name">
+      <%= project.name %>
+    </div>
+  <% end %>
 <% end %>

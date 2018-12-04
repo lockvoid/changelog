@@ -1,13 +1,11 @@
-<h1>
-  <%= @project.name %>
+<h1 class="project__name">
+  <%= @project.name %>’s Release Notes
 </h1>
 
-<div class="releases">
+<div class="project__releases">
+  <%= render 'shared/new-release', project: @project %>
+
   <% @releases.each do |release| %>
-    <div class="releases__release">
-      <%= render 'release', release: release %>
-    </div>
+    <%= render 'shared/release', release: release %>
   <% end %>
 </div>
-
-<%= link_to 'Back', projects_path %>

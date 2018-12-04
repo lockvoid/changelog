@@ -1,5 +1,12 @@
 import { replace } from 'feather-icons';
 
-document.addEventListener('turbolinks:load', () => {
+const observer = new MutationObserver(() => {
   replace();
 });
+
+observer.observe(document, {
+  attributes: true,
+  childList: true,
+  subtree: true,
+});
+

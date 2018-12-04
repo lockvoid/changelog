@@ -1,0 +1,12 @@
+<%= link_to new_project_url, class: 'new-project-card' do %>
+  <%= render 'shared/card', elevation: 1, transparent: true, interactive: true do %>
+    <div class="new-project-card__content">
+      <i data-feather="plus" class="new-project-card__plus"></i>
+
+      <div class="new-project-card__text">
+        New Project
+      </div>
+    </div>
+  <% end %>
+<% end %>
+

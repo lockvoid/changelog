@@ -1,0 +1,29 @@
+.new-project-card {
+}
+
+.new-project-card > * {
+  width: 100%;
+  height: 100%;
+}
+
+.new-project-card__content {
+  justify-content: center;
+  align-items: center;
+  color: #5aac44;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.new-project-card__plus {
+  color: #5aac44;
+  width: 32px;
+  height: 32px;
+}
+
+.new-project-card__text {
+  font-size: 18px;
+  line-height: 20px;
+  margin-top: 10px;
+  color: #5aac44;
+}

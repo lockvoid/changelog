@@ -1,0 +1,9 @@
+<%
+  anchor = render('shared/timeline-anchor', url: '/')
+%>
+
+<div class="release" id="<%= dom_id release %>" data-controller="release" >
+  <%= render 'shared/timeline', label: release_date(release), anchor: anchor, content_id: dom_id(release, :post), content_target: "release.post" do %>
+    <%= render 'shared/release-post', release: release %>
+  <% end %>
+</div>

@@ -1,5 +1,19 @@
 <div class="application-header">
+  <div class="application-header__greetings">
+    <%= greetings %>
+  </div>
+
   <div class="application-header__user">
-    Logged in as <%= current_user.display_name %> · <%= link_to "Log out", logout_path %>
+    <div class="application-header__menu-item">
+      Logged in as <%= current_user.display_name %>
+    </div>
+
+    <div class="application-header__menu-item">
+      <%= link_to "Switch project", projects_path %>
+    </div>
+
+    <div class="application-header__menu-item">
+      <%= link_to "Log out", logout_path %>
+    </div>
   </div>
 </div>

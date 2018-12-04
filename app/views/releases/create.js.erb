@@ -1,0 +1,11 @@
+//
+
+var newRelease = document.querySelector('#new_release');
+
+newRelease.parentNode.replaceChild(createElementFromHTML('<%=j render "shared/new-release", project: @project %>'), newRelease);
+
+//
+
+var newRelease = document.querySelector('#new_release');
+
+newRelease.parentNode.insertBefore(createElementFromHTML('<%=j render "shared/release", release: @release %>'), newRelease.nextSibling);

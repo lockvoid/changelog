@@ -1,0 +1,15 @@
+.new-project {
+  align-items: center;
+  margin: 0 auto;
+  width: 500px;
+  flex-direction: column;
+  display: flex;
+}
+
+.new-project__form {
+  width: 400px;
+}
+
+.new-project__footer {
+  margin-top: 20px;
+}

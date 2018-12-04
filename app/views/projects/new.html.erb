@@ -1,13 +1,22 @@
-<h1>
-  <% if @projects.empty? %>
-    Create your first project!
-  <% else %>
-    New Project
-  <% end %>
-</h1>
+<div class="new-project">
+  <h1>
+    <% if @projects.empty? %>
+      Create your first project! 🚀
+    <% else %>
+      New Project
+    <% end %>
+  </h1>
 
-<%= render 'form', project: @project %>
+  <div class="signup__form">
+    <%= render 'shared/card', elevation: 2 do %>
+      <%= render 'form', project: @project %>
+    <% end %>
+  </div>
 
-<% if @projects.any? %>
-  <%= link_to 'Back', projects_path %>
-<% end %>
+  <div class="signup__footer">
+    <% if @projects.any? %>
+      <%= link_to 'Back to projects', projects_path %>
+    <% end %>
+  </div>
+</div>
+

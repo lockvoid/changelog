@@ -1,18 +1,4 @@
-.release-line {
-  padding: 0 5px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.release-line__line {
-  width: 2px;
-  background-color: color(#aa9c84 a(0.5));
-  height: 100%;
-}
-
-.release-line__anchor {
+.timeline-anchor {
   flex-shrink: 0;
   width: 30px;
   height: 30px;

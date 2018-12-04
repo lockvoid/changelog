@@ -10,4 +10,5 @@ html, body {
   padding: 0;
   margin: 0;
   background: #f6f2ef;
+  scroll-behavior: smooth;
 }

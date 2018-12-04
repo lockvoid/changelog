@@ -1,7 +1,13 @@
-<h1>Sign In</h1>
+<div class="signin">
+  <h1>Sign In</h1>
 
-<%= render 'form' %>
+  <div class="signin__form">
+    <%= render 'shared/card', elevation: 2 do %>
+      <%= render 'form' %>
+    <% end %>
+  </div>
 
-<div>
-  <%= link_to 'Don’t have an account?', signup_path %>
+  <div class="signin__footer">
+    <%= link_to 'Don’t have an account?', signup_path %>
+  </div>
 </div>

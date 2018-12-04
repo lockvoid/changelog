@@ -1,0 +1,3 @@
+var post = document.querySelector('#<%= dom_id @release %>')
+
+post.innerHTML = '<%=j render "shared/release", release: @release %>';

@@ -1,7 +1,13 @@
-<h1>You’ll love it! ❤️</h1>
+<div class="signup">
+  <h1>Sign Up. You’ll love it! ❤️</h1>
 
-<%= render 'form', user: @user %>
+  <div class="signup__form">
+    <%= render 'shared/card', elevation: 2 do %>
+      <%= render 'form', user: @user %>
+    <% end %>
+  </div>
 
-<div>
-  <%= link_to 'Already have an account?', signin_path %>
+  <div class="signup__footer">
+    <%= link_to 'Already have an account?', signin_path %>
+  </div>
 </div>
