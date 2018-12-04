@@ -1,0 +1,11 @@
+<%
+  anchor = render('shared/timeline-anchor', url: '/', icon: 'git-commit')
+%>
+
+<div class="recent-releases-sepatator">
+  <%= render 'shared/timeline', anchor: anchor, content_target: "release.post" do %>
+    <div class="recent-releases-sepatator__content">
+      The newest releases above are sorted by creation date, not by publish date.
+    </div>
+  <% end %>
+</div>

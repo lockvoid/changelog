@@ -161,7 +161,7 @@ input[type="submit"], button {
   text-decoration: none;
   white-space: nowrap;
   background-color: #5aac44;
-  box-shadow: 0 1px 0 0 #3f6f21;
+  box-shadow: 0 1px 0px 0 #3f6f21;
 }
 
 .field {

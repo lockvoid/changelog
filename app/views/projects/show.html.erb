@@ -1,11 +1,17 @@
-<h1 class="project__name">
-  <%= @project.name %>’s Release Notes
-</h1>
+<div class="project">
+  <h1 class="project__name">
+    <%= @project.name %>’s Release Notes
+  </h1>
 
-<div class="project__releases">
-  <%= render 'shared/new-release', project: @project %>
+  <div class="project__releases">
+    <%= render 'shared/new-release', project: @project %>
 
-  <% @releases.each do |release| %>
-    <%= render 'shared/release', release: release %>
-  <% end %>
+    <div class="js-recent-releases-sepatator" style="display: none;">
+      <%= render 'shared/recent-releases-sepatator' %>
+    </div>
+
+    <% @releases.each do |release| %>
+      <%= render 'shared/release', release: release %>
+    <% end %>
+  </div>
 </div>

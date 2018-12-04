@@ -4,6 +4,12 @@ var newRelease = document.querySelector('#new_release');
 
 newRelease.parentNode.replaceChild(createElementFromHTML('<%=j render "shared/new-release", project: @project %>'), newRelease);
 
+// Show the release separator.
+
+var separator = document.querySelector('.js-recent-releases-sepatator');
+
+separator.style.display = "block";
+
 //
 
 var newRelease = document.querySelector('#new_release');
