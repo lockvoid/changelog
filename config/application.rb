@@ -10,6 +10,8 @@ module Changelog
 
     config.generators.system_tests = nil
 
+    config.assets.enabled = false
+
     config.action_view.field_error_proc = Proc.new { |html_tag, instance|
       puts
       if html_tag =~ /<(input|textarea|select)/
