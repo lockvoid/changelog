@@ -24,7 +24,7 @@ class ProjectsController < ApplicationController
         if @project.save
           @project.releases.create name: 'v1.0.0', date: Time.now, body: Release::BODY_TEMPLATE
 
-          format.html { redirect_to @project, notice: 'Project was successfully created.' }
+          format.html { redirect_to @project }
         else
           format.html { render :new }
         end
