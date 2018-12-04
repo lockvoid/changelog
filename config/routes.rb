@@ -10,5 +10,9 @@ Rails.application.routes.draw do
   post "signin" => "sessions#create", as: :sessions
   get "logout" => "sessions#destroy", as: :logout
 
-  root "projects#index"
+  constraints Constraints::Authenticated.new do
+    root to: "projects#index"
+  end
+
+  root to: "sessions#new"
 end

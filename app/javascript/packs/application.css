@@ -103,10 +103,10 @@ input[type="text"], input[type="password"], input[type="date"] {
   height: 30px;
   padding: 0 10px;
   border-radius: 3px;
-  border: 1px solid rgba(black, 0.2);
+  border: 1px solid color(black a(0.2));
   background-color: white;
   border-radius: 2px;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 2px color(black a(0.075));
   box-sizing: border-box;
   display: flex;
   font-family: var(--default-font-family);
@@ -116,17 +116,17 @@ input[type="text"], input[type="password"], input[type="date"] {
 
   &:focus {
     border-color: #0052cc;
-    box-shadow: 0 0 0 3px rgba(#0052cc, 0.3);
+    box-shadow: 0 0 0 3px color(#0052cc a(0.3));
   }
 }
 
 textarea {
   padding: 10px;
   border-radius: 3px;
-  border: 1px solid rgba(black, 0.2);
+  border: 1px solid color(black a(0.2));
   background-color: white;
   border-radius: 2px;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 2px color(black a(0.075));
   box-sizing: border-box;
   display: flex;
   font-family: var(--default-font-family);
@@ -136,7 +136,7 @@ textarea {
 
   &:focus {
     border-color: #0052cc;
-    box-shadow: 0 0 0 3px rgba(#0052cc, 0.3);
+    box-shadow: 0 0 0 3px color(#0052cc a(0.3));
   }
 }
 
@@ -180,7 +180,7 @@ input[type="submit"], button {
 
 .field-input--invalid {
   border: 1px solid #cf2c00 !important;
-  box-shadow: inset 0 1px 2px rgba(#cf2c00, 0.2) !important;
+  box-shadow: inset 0 1px 2px color(#cf2c00 a(0.2)) !important;
 }
 
 .field-error {
