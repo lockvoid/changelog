@@ -1,4 +1,7 @@
 var form = document.querySelector('#new_release_form')
 
-form.setAttribute('data-post', form.innerHTML);
+if (!form.getAttribute('data-post')) {
+  form.setAttribute('data-post', form.innerHTML);
+}
+
 form.innerHTML = '<%=j render "release-form", project: @project, release: @release %>';

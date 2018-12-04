@@ -1,4 +1,8 @@
 var post = document.querySelector('#<%= dom_id @release, :post %>')
 
-post.setAttribute('data-post', post.innerHTML);
+
+if (!post.getAttribute('data-post')) {
+  post.setAttribute('data-post', post.innerHTML);
+}
+
 post.innerHTML = '<%=j render "release-form", release: @release %>';
