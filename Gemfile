@@ -12,6 +12,7 @@ gem "sorcery", "~> 0.13.0"
 gem "email_validator", "~> 1.6"
 gem 'bootsnap', '>= 1.1.0', require: false
 gem "kramdown", "~> 1.17"
+gem "uglifier", "~> 4.1"
 
 group :development do
   gem 'sqlite3'
@@ -34,6 +35,3 @@ group :production do
   gem "rails_12factor", "~> 0.0.3"
   gem "pg", "~> 1.1"
 end
-
-
-
