@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :projects, only: [:index, :show, :new, :create] do
-    resources :releases, only: [:show, :new, :edit, :new, :create, :update, :destroy], shallow: true
+    resources :releases, shallow: true do
+      resources :notices, shallow: true
+    end
   end
 
   get "signup" => "registrations#new", as: :signup

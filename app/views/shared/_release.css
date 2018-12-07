@@ -1,3 +1,7 @@
 .release {
   max-width: 800px;
 }
+
+.release--notice {
+  margin-bottom: 10px;
+}

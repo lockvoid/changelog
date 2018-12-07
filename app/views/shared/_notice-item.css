@@ -1,0 +1,12 @@
+.notice-item {
+  display: flex;
+}
+
+.notice-item__preview {
+  flex: 1;
+}
+
+.notice-item__stats {
+  flex: 1;
+  margin-left: 20px;
+}

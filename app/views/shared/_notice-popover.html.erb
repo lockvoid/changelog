@@ -1,0 +1,17 @@
+<div class="notice-popover popper" x-placement="left">
+  <div class="popper__arrow" x-arrow=""></div>
+
+  <% if notice.heading.present? %>
+    <h3 class="notice-popover__heading">
+      <%= notice.heading %>
+    </h3>
+  <% end %>
+
+  <div class="notice-popover__body">
+    <%=m notice.body %>
+  </div>
+
+  <div class="notice-popover__actions">
+    <%= button_to 'Got it', nil, class: "notice-popover__button" %>
+  </div>
+</div>

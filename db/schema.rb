@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_30_175420) do
+ActiveRecord::Schema.define(version: 2018_12_04_192325) do
+
+  create_table "notices", force: :cascade do |t|
+    t.string "heading"
+    t.string "body"
+    t.string "trigger_element_css_selector"
+    t.integer "release_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["release_id"], name: "index_notices_on_release_id"
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string "name"

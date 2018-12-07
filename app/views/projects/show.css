@@ -1,3 +1,7 @@
 .project__releases {
   max-width: 800px;
 }
+
+.project__releases-notice {
+  margin-bottom: 10px;
+}

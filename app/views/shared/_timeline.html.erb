@@ -15,7 +15,7 @@
     <%= content_tag :div, '', class: 'timeline__line' %>
   </div>
 
-  <div class="timeline__content" id="<%= local_assigns[:content_id] %>" data-target="<%= local_assigns[:content_target] %>">
+  <div class="timeline__content">
     <%= yield %>
   </div>
 </div>

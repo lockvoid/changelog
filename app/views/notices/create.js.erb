@@ -1,0 +1,11 @@
+//
+
+var newNotice = document.querySelector("#<%= dom_id @release, :new_notice %>");
+
+newNotice.parentNode.replaceChild(createElementFromHTML('<%=j render "shared/notice-popover", notice: @notice %>'), newNotice);
+
+//
+
+var newNotice = document.querySelector("#<%= dom_id @release, :new_notice %>");
+
+newNotice.parentNode.insertBefore(createElementFromHTML('<%=j render "shared/release", release: @release %>'), newRelease.nextSibling);

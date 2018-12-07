@@ -38,7 +38,8 @@ module Changelog
         html_tag
       end
     }
+
+    config.generators.stylesheets = false
+    config.generators.javascripts = false
   end
 end
-
-

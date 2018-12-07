@@ -11,6 +11,7 @@ class Release < ApplicationRecord
 EOS
 
   belongs_to :project
+  has_many :notices
 
   validates :name, presence: true
 end

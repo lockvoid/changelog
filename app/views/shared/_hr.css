@@ -1,0 +1,16 @@
+.hr {
+  display: flex;
+  align-items: center;
+  color: #aa9c84;
+  width: 100%;
+}
+
+.hr__line {
+  flex: 1;
+}
+
+.hr__heading {
+  padding: 0 5px;
+  font-size: 12px;
+  font-weight: 500;
+}

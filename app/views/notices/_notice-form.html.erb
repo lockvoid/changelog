@@ -1,0 +1,43 @@
+<%= render 'shared/card', elevation: 2 do %>
+  <%= form_with model: notice, url: (notice.new_record? ? [release, notice] : notice) do |f| %>
+    <fieldset>
+      <legend>
+        Content
+      </legend>
+
+      <div class="field">
+        <%= f.label :heading %>
+        <%= f.text_field :heading, placeholder: 'Optional' %>
+      </div>
+
+      <div class="field">
+        <%= f.label :body %>
+        <%= f.text_area :body, rows: "3"  %>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>
+        Appearing
+      </legend>
+
+      <div class="field">
+        <%= f.label :trigger_element_css_selector do %>
+          CSS Selector (<%= link_to 'What’s this?', 'https://css-tricks.com/how-css-selectors-work' %>)
+        <% end %>
+
+        <%= f.text_field :trigger_element_css_selector %>
+      </div>
+    </fieldset>
+
+    <div class="form-actions">
+      <%= f.submit class: 'button' %>
+
+      <% if notice.new_record? %>
+        <%= link_to "Delete", nil, "data-action": "click->notice#cancelEditing" %>
+      <% else %>
+        <%= link_to 'Cancel', nil, "data-action": "click->notice#cancelEditing" %>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>

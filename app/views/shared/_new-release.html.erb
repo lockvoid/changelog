@@ -2,9 +2,11 @@
   anchor = timeline_button new_project_release_path(project), 'plus', remote: true
 %>
 
-<div class="new-release" id="new_release" data-controller="release">
-  <%= render 'shared/timeline', anchor: anchor, content_id: "new_release_form", content_target: "release.post" do %>
-    <div class="new-release__content">
+<div class="new-release" id="new_release">
+  <%= render 'shared/timeline', anchor: anchor do %>
+    <div data-controller="inplace-editing" data-target="inplace-editing.content" id="new_release_form">
+      <div class="new-release__content">
+      </div>
     </div>
   <% end %>
 </div>

@@ -2,8 +2,30 @@
   anchor = render('shared/timeline-anchor', url: '/')
 %>
 
-<div class="release" id="<%= dom_id release %>" data-controller="release" >
-  <%= render 'shared/timeline', label: release_date(release), anchor: anchor, content_id: dom_id(release, :post), content_target: "release.post" do %>
-    <%= render 'shared/release-post', release: release %>
+<div class="release" id="<%= dom_id release %>">
+  <%= render 'shared/timeline', label: release_date(release), anchor: anchor do %>
+    <div class="release--post" data-controller="inplace-editing" data-target="inplace-editing.content" id="<%= dom_id(release, :post) %>">
+      <%= render 'shared/release-post', release: release %>
+    </div>
+
+    <div class="release--notices">
+      <% if release.notices.any? %>
+        <%= render 'shared/hr', heading: 'Release popover notices' %>
+      <% end %>
+
+      <% release.notices.each do |notice| %>
+        <div class="release--notice">
+          <%= render 'shared/notice-item', notice: notice %>
+        </div>
+      <% end %>
+
+      <div data-controller="inplace-editing" data-target="inplace-editing.content" id="<%= dom_id release, :new_notice %>">
+        <% if release.notices.empty? %>
+          <%= link_to 'Spice up with popover notices 🌶', new_release_notice_path(release), remote: true %>
+        <% else %>
+          <%= link_to 'New notice', new_release_notice_path(release), remote: true %>
+        <% end %>
+      </div>
+    </div>
   <% end %>
 </div>

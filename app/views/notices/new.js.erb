@@ -1,0 +1,7 @@
+var form = document.querySelector("#<%= dom_id @release, :new_notice %>");
+
+if (!form.getAttribute('data-content-was')) {
+  form.setAttribute('data-content-was', form.innerHTML);
+}
+
+form.innerHTML = '<%=j render "notice-form", release: @release, notice: @notice %>';
