@@ -12,6 +12,16 @@
 
 ActiveRecord::Schema.define(version: 2018_12_20_133224) do
 
+  create_table "collaborations", force: :cascade do |t|
+    t.integer "project_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["project_id", "user_id"], name: "index_collaborations_on_project_id_and_user_id"
+    t.index ["project_id"], name: "index_collaborations_on_project_id"
+    t.index ["user_id"], name: "index_collaborations_on_user_id"
+  end
+
   create_table "events", force: :cascade do |t|
     t.string "name"
     t.string "viewer_id"
@@ -36,10 +46,8 @@ ActiveRecord::Schema.define(version: 2018_12_20_133224) do
   create_table "projects", force: :cascade do |t|
     t.string "name"
     t.string "api_key"
-    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_projects_on_user_id"
   end
 
   create_table "releases", force: :cascade do |t|
