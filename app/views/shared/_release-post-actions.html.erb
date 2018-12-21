@@ -1,9 +1,0 @@
-<div class="release-post-actions">
-  <%= link_to edit_release_path(release), remote: true, class: 'release-post-actions__action' do %>
-    <i data-feather="edit"></i>
-  <% end %>
-
-  <%= link_to release, remote: true, method: :delete, data: { confirm: 'Are you sure?' }, class: 'release-post-actions__action' do %>
-    <i data-feather="trash-2"></i>
-  <% end %>
-</div>

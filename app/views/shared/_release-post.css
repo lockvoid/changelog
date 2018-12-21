@@ -20,6 +20,6 @@
   padding: 30px 30px 30px 80px;
 }
 
-.release-post__name:hover .release-post__actions {
+.release-post:hover .release-post__actions {
   display: flex;
 }

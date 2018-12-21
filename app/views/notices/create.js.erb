@@ -1,11 +1,20 @@
-//
-
 var newNotice = document.querySelector("#<%= dom_id @release, :new_notice %>");
 
-newNotice.parentNode.replaceChild(createElementFromHTML('<%=j render "shared/notice-popover", notice: @notice %>'), newNotice);
+newNotice.innerHTML = '<%=j render "shared/new-notice", release: @release %>'
 
+newNotice.parentNode.insertBefore(createElementFromHTML('<%=j render "shared/notice", notice: @notice %>'), newNotice);
+
+
+
+////
 //
-
-var newNotice = document.querySelector("#<%= dom_id @release, :new_notice %>");
-
-newNotice.parentNode.insertBefore(createElementFromHTML('<%=j render "shared/release", release: @release %>'), newRelease.nextSibling);
+//var newNotice = document.querySelector("#<%= dom_id @release, :new_notice %>");
+//
+//newNotice.parentNode.replaceChild(createElementFromHTML('<%=j render "shared/notice", notice: @notice %>'), newNotice);
+//
+////
+//
+//var newNotice = document.querySelector("#<%= dom_id @release, :notices %>");
+//
+//newNotice.parentNode.insertBefore(createElementFromHTML('<%=j render "shared/release", release: @release %>'), newRelease.nextSibling);
+//

@@ -1,4 +1,4 @@
-.recent-releases-sepatator__anchor {
+.recent-releases-timeline__anchor {
   width: 40px;
   height: 40px;
   background: white;
@@ -7,7 +7,7 @@
   margin-bottom: 20px;
 }
 
-.recent-releases-sepatator__content {
+.recent-releases-timeline__content {
   height: 30px;
   margin-bottom: 10px;
   display: flex;

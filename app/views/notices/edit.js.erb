@@ -1,0 +1,7 @@
+var form = document.querySelector('#<%= dom_id @notice %>')
+
+if (!form.getAttribute('data-content-was')) {
+  form.setAttribute('data-content-was', form.innerHTML);
+}
+
+form.innerHTML = '<%=j render "notice-form", notice: @notice %>';

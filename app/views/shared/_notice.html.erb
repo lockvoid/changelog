@@ -1,0 +1,49 @@
+<div class="notice" data-controller="inplace-editing" data-target="inplace-editing.content" id="<%= dom_id(notice) %>">
+  <div class="notice__preview">
+    <%= render 'shared/notice-popover', notice: notice %>
+  </div>
+
+  <div class="notice__panel">
+    <div class="stats">
+      <div class="stats__item">
+        <div class="stats__legend">
+          Views
+        </div>
+
+        <div class="stats__value">
+          <%= notice.views_count %>
+        </div>
+      </div>
+
+      <div class="stats__item">
+        <div class="stats__legend">
+          Reactions
+        </div>
+
+        <div class="stats__value">
+          <%= notice.views_count %>
+        </div>
+      </div>
+
+      <div class="stats__item">
+        <div class="stats__legend stats__legend--emoji">
+          👍
+        </div>
+
+        <div class="stats__value">
+          <%= notice.views_count %>%
+        </div>
+      </div>
+
+      <div class="stats__item">
+        <div class="stats__legend stats__legend--emoji">
+          👎
+        </div>
+
+        <div class="stats__value">
+          <%= notice.views_count %>%
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

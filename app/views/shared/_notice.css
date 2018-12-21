@@ -1,0 +1,21 @@
+.notice {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.notice__preview {
+  flex: 1;
+  position: relative;
+}
+
+.notice__panel {
+  flex: 1;
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notice:hover .notice-popover__actions  {
+  display: block;
+}

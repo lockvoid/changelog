@@ -1,0 +1,11 @@
+<%
+  anchor = render('shared/timeline-anchor', url: '/', icon: 'git-commit')
+%>
+
+<div class="recent-releases-timeline">
+  <%= render 'shared/timeline', anchor: anchor, content_target: "release.post" do %>
+    <div class="recent-releases-timeline__content">
+      <%= render 'shared/hr', heading: 'Previous releases' %>
+    </div>
+  <% end %>
+</div>

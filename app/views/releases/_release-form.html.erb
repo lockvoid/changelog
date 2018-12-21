@@ -1,27 +1,29 @@
-<%= render 'shared/card', elevation: 2 do %>
+<%= render "shared/card", elevation: 2 do %>
+  <h2><%= release.new_record? ? "New release" : "Edit release" %></h2>
+
   <%= form_with model: release, url: (release.new_record? ? [project, release] : release) do |f| %>
     <div class="field">
-      <%= f.label :name, 'Release name' %>
+      <%= f.label :name, "Release name" %>
       <%= f.text_field :name %>
     </div>
 
     <div class="field">
-      <%= f.label :body, 'Release notes' %>
+      <%= f.label :body, "Release notes" %>
       <%= f.text_area :body, rows: "10" %>
     </div>
 
     <div class="field">
-      <%= f.label :date, 'Release date' %>
+      <%= f.label :date, "Release date" %>
       <%= f.date_field :date %>
     </div>
 
     <div class="form-actions">
-      <%= f.submit class: 'button' %>
+      <%= f.submit class: "button" %>
 
       <% if release.new_record? %>
-        <%= link_to "Delete", nil, "data-action": "click->inplace-editing#cancelEditing" %>
+        <%= link_to "Delete", nil, "data-action": "click->inplace-editing#cancel" %>
       <% else %>
-        <%= link_to 'Cancel', nil, "data-action": "click->inplace-editing#cancelEditing" %>
+        <%= link_to "Cancel", nil, "data-action": "click->inplace-editing#cancel" %>
       <% end %>
     </div>
   <% end %>

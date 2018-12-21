@@ -1,0 +1,9 @@
+<div class="notice-actions">
+  <%= link_to edit_notice_path(notice), remote: true, title: "Edit", class: "notice-actions__action" do %>
+    <i data-feather="edit"></i>
+  <% end %>
+
+  <%= link_to notice, method: :delete, remote: true, method: :delete, data: { confirm: 'Are you sure?' }, title: "Delete", class: "notice-actions__action" do %>
+    <i data-feather="trash-2"></i>
+  <% end %>
+</div>

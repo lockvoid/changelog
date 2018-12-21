@@ -65,6 +65,6 @@ class NoticesController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def notice_params
-    params.require(:notice).permit(:heading, :body, :trigger_element_css_selector)
+    params.require(:notice).permit(:heading, :body, :target_element_selector)
   end
 end

@@ -1,4 +1,6 @@
-<%= render 'shared/card', elevation: 2 do %>
+<%= render 'shared/card', elevation: 2, justify: true do %>
+  <h2><%= notice.new_record? ? "New notice" : "Edit notice" %></h2>
+
   <%= form_with model: notice, url: (notice.new_record? ? [release, notice] : notice) do |f| %>
     <fieldset>
       <legend>
@@ -22,11 +24,11 @@
       </legend>
 
       <div class="field">
-        <%= f.label :trigger_element_css_selector do %>
+        <%= f.label :target_element_selector do %>
           CSS Selector (<%= link_to 'What’s this?', 'https://css-tricks.com/how-css-selectors-work' %>)
         <% end %>
 
-        <%= f.text_field :trigger_element_css_selector %>
+        <%= f.text_field :target_element_selector %>
       </div>
     </fieldset>
 
@@ -34,9 +36,9 @@
       <%= f.submit class: 'button' %>
 
       <% if notice.new_record? %>
-        <%= link_to "Delete", nil, "data-action": "click->notice#cancelEditing" %>
+        <%= link_to "Delete", "#", "data-action": "click->inplace-editing#cancel" %>
       <% else %>
-        <%= link_to 'Cancel', nil, "data-action": "click->notice#cancelEditing" %>
+        <%= link_to 'Cancel', "#", "data-action": "click->inplace-editing#cancel" %>
       <% end %>
     </div>
   <% end %>

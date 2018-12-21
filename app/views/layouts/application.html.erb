@@ -8,6 +8,7 @@
 
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload', media: 'all' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
@@ -24,5 +25,13 @@
 
       <%= yield %>
     </div>
+
+    <script>
+      window.changelogSettings = {
+        apiKey: 'f3e9b80c9062335e',
+      };
+    </script>
+
+    <script src="/widget.js"></script>
   </body>
 </html>

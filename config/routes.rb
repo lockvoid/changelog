@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  namespace :api do
+    resources :projects, only: [:show]
+  end
+
   resources :projects, only: [:index, :show, :new, :create] do
     resources :releases, shallow: true do
       resources :notices, shallow: true
@@ -16,5 +20,8 @@ Rails.application.routes.draw do
     root to: "projects#index"
   end
 
+  get "widget.js", to: "assets#show", id: "widget"
+
   root to: "sessions#new"
 end
+

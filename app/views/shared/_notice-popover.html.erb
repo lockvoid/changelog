@@ -11,7 +11,11 @@
     <%=m notice.body %>
   </div>
 
-  <div class="notice-popover__actions">
+  <div class="notice-popover__footer">
     <%= button_to 'Got it', nil, class: "notice-popover__button" %>
+  </div>
+
+  <div class="notice-popover__actions">
+    <%= render 'shared/notice-actions', notice: notice %>
   </div>
 </div>

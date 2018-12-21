@@ -6,8 +6,8 @@
   <div class="project__releases">
     <%= render 'shared/new-release', project: @project %>
 
-    <div class="js-recent-releases-sepatator" style="display: none;">
-      <%= render 'shared/recent-releases-sepatator' %>
+    <div class="project__recent-releases-timeline" style="display: none;">
+      <%= render 'shared/recent-releases-timeline' %>
     </div>
 
     <% @releases.each do |release| %>

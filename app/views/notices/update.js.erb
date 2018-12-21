@@ -1,0 +1,3 @@
+var notice = document.querySelector('#<%= dom_id @notice %>')
+
+notice.innerHTML = '<%=j render "shared/notice", notice: @notice %>';

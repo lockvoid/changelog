@@ -7,6 +7,6 @@ class Project < ApplicationRecord
   validates :name, presence: true
 
   def renew_api_key
-    self.api_key = SecureRandom.hex(32)
+    self.api_key = SecureRandom.hex(8)
   end
 end

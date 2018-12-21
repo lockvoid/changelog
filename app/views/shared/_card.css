@@ -25,3 +25,7 @@
 .card--transparent {
   background: transparent;
 }
+
+.card--justify {
+  width: 100%;
+}
