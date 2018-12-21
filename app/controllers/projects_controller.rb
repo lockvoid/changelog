@@ -22,6 +22,8 @@ class ProjectsController < ApplicationController
     respond_to do |format|
       ActiveRecord::Base.transaction do
         if @project.save
+          current_user.projects << @project
+
           @project.releases.create name: 'v1.0.0', date: Time.now, body: Release::BODY_TEMPLATE
 
           format.html { redirect_to @project }
