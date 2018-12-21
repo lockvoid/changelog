@@ -5,6 +5,7 @@ class AssetsController < ApplicationController
   def show
     respond_to do |format|
       format.js { redirect_to ActionController::Base.helpers.asset_pack_path("#{params[:id]}.js") }
+      format.css { redirect_to ActionController::Base.helpers.asset_pack_path("#{params[:id]}.css") }
     end
   end
 end

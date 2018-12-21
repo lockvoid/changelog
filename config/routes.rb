@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   end
 
   get "widget.js", to: "assets#show", id: "widget"
+  get "widget.css", to: "assets#show", id: "widget"
 
   root to: "sessions#new"
 end

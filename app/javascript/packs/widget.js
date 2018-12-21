@@ -1,26 +1,36 @@
 import './widget.css';
 import Popper from 'popper.js';
 
+function loadCss(url) {
+  var link = document.createElement( "link" );
+  link.href = url;
+  link.type = "text/css";
+  link.rel = "stylesheet";
+  link.media = "screen,print";
+
+  document.getElementsByTagName( "head" )[0].appendChild( link );
+}
+
 if (!window.changelogSettings) {
   throw new Error('No Changelog config');
 }
 
 const noticeTemplate = ({ id, heading, body }) => `
-  <div class="notice-popover popper" x-placement="left" id="changelog-notice-${id}">
+  <div class="changelog-notice popper" x-placement="left" id="changelog-notice-${id}">
     <div class="popper__arrow" x-arrow=""></div>
 
     ${heading && `
-      <h3 class="notice-popover__heading">
+      <h3 class="changelog-notice__heading">
         ${heading}
       </h3>
     `}
 
-    <div class="notice-popover__body">
+    <div class="changelog-notice__body">
       ${body}
     </div>
 
-    <div class="notice-popover__footer">
-      <button type="button" class="notice-popover__button">
+    <div class="changelog-notice__footer">
+      <button type="button" class="changelog-notice__button">
         Got It
       </button>
     </div>
@@ -31,8 +41,10 @@ function serverUrl() {
   return process.env.NODE_ENV === 'development' ? 'http://0.0.0.0:3000' : 'https://sendsay-changelog-production.herokuapp.com';
 }
 
+loadCss(`${serverUrl()}/widget.css`);
+
 if (!window.changelogLoaded) {
-  fetch(`${serverUrl()}/api/projects/${window.changelogSettings.apiKey}.json`).then(res => res.json()).then(project => {
+  fetch(`${serverUrl()}/api/projects/${window.changelogSettings.apiKey}.json`).then(res => res.json(), err => console.log(err)).then(project => {
     window.changelogLoaded = true;
 
     const notices = project.notices;

@@ -13,5 +13,9 @@ class ProjectSerializer < ActiveModel::Serializer
 
   class NoticeSerializer < ActiveModel::Serializer
     attributes :id, :heading, :body, :target_element_selector
+
+    def body
+      Kramdown::Document.new(object.body).to_html
+    end
   end
 end

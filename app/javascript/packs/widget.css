@@ -1,0 +1,101 @@
+.changelog-notice {
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 0 1px rgba(16,22,26,.1), 0 1px 1px rgba(16,22,26,.2), 0 2px 6px rgba(16,22,26,.2);
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 270px;
+  padding: 10px;
+  position: relative;
+}
+
+.changelog-notice__heading {
+  font-weight: 500;
+  margin: 0 0 10px;
+  padding: 0;
+  line-height: 24px;
+  font-size: 20px;
+}
+
+.changelog-notice__body {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.popper__arrow {
+  background: white;
+  width: 10px;
+  height: 10px;
+  border-color: color(black a(0.2));
+  border-style: solid;
+  position: absolute;
+  border-width: 0;
+}
+
+.changelog-notice__button {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  border: 0;
+  font-size: 14px;
+  font-weight: 500;
+  height: 30px;
+  color: white;
+  justify-content: center;
+  line-height: 1;
+  outline: 0;
+  border-radius: 3px;
+  padding: 0 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 1px 0px 0 #3f6f21;
+  background-color: color(black a(0.4));
+}
+
+.changelog-notice[x-placement^="bottom"] .popper__arrow {
+  transform: rotate(45deg);
+  top: -6px;
+  border-left-width: 1px;
+  border-top-width: 1px;
+}
+
+.changelog-notice[x-placement^="bottom"].notice--preview {
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.changelog-notice[x-placement^="top"] .popper__arrow {
+  transform: rotate(225deg);
+  bottom: -6px;
+  border-left-width: 1px;
+  border-top-width: 1px;
+}
+
+.changelog-notice[x-placement^="top"].notice--preview {
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.changelog-notice[x-placement^="right"] .popper__arrow {
+  border-width: 5px 5px 5px 0;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  left: -5px;
+  top: calc(50% - 5px);
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.changelog-notice[x-placement^="left"] .popper__arrow {
+  transform: translateY(-50%) rotate(-45deg);;
+  top: 50%;
+  left: -6px;
+  border-left-width: 1px;
+  border-top-width: 1px;
+}
+
+.changelog-notice__actions {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  display: none;
+}
