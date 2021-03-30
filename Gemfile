@@ -10,7 +10,7 @@ gem 'webpacker'
 gem "sorcery", "~> 0.13.0"
 gem "email_validator", "~> 1.6"
 gem 'bootsnap', '>= 1.1.0', require: false
-gem "kramdown", "~> 1.17"
+gem "kramdown", "~> 2.3"
 gem 'active_model_serializers', '~> 0.10.0'
 
 group :development do
